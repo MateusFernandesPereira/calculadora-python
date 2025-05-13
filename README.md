@@ -51,6 +51,7 @@ calculadora-python/
 ├── calculadora.py      # Implementação da classe Calculator e execução da GUI
 ├── assets/
 │   ├── screenshot1.png     # Captura de tela da interface inicial
-│   └── screenshot2.png     # Captura de tela demonstrando uso da calculadora
+│   ├── screenshot2.png     # Captura de tela demonstrando uso da calculadora
+│   └── screenshot3.png     # Captura de tela mostrando mensagem de erro
 └── README.md               # Documento de instruções e descrição do projeto
 ```
