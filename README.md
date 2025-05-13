@@ -55,3 +55,17 @@ calculadora-python/
 │   └── screenshot3.png     # Captura de tela mostrando mensagem de erro
 └── README.md               # Documento de instruções e descrição do projeto
 ```
+## 📸 Capturas de Tela
+
+### 🖥️ Interface Inicial
+![Interface Inicial](assets/screenshot1.png)
+
+---
+
+### 🔢 Exemplo de Cálculo
+![Uso da Calculadora](assets/screenshot2.png)
+
+---
+
+### ⚠️ Mensagem de Erro
+![Mensagem de Erro](assets/screenshot3.png)
