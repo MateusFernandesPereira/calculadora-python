@@ -1,5 +1,3 @@
-# calculator_core.py
-
 def evaluate_expression(expression: str) -> str:
     try:
         result = eval(expression)

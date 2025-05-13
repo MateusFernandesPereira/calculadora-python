@@ -67,17 +67,15 @@ class Calculator(ttk.Frame):
             self.current_expression += str(char)
         self.update_display()
 
-    from calculator_core import evaluate_expression
-
-	# Dentro do método evaluate:
-	def evaluate(self):
-		result = evaluate_expression(self.current_expression)
-		if result == "Erro":
-			messagebox.showerror("Erro", "Expressão inválida!")
-			self.current_expression = ''
-		else:
-			self.current_expression = result
-
+    def evaluate(self):
+        # Substitui ^ por ** para potência
+        expr = self.current_expression.replace('^', '**')
+        result = evaluate_expression(expr)
+        if result == "Erro":
+            messagebox.showerror("Erro", "Expressão inválida!")
+            self.current_expression = ''
+        else:
+            self.current_expression = result
 
     def update_display(self):
         self.display_label.config(text=self.current_expression or '0')
