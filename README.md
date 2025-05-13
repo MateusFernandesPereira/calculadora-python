@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Testes](https://github.com/MateusFernandesPereira/calculadora-python/actions/workflows/seu-workflow.yml/badge.svg)
 
 Este repositório apresenta uma aplicação de calculadora com interface gráfica, desenvolvida em Python, utilizando a biblioteca Tkinter/ttk.
 O projeto foi elaborado como parte da resolução de um exercício proposto na disciplina Fundamentos de Sistemas de Informação, ministrada pelo docente Higor Amario de Souza, no curso de Bacharelado em Sistemas de Informação da UNESP – Universidade Estadual Paulista “Júlio de Mesquita Filho”.
@@ -24,6 +25,26 @@ O projeto foi elaborado como parte da resolução de um exercício proposto na d
 
 ---
 
+## 🧪 Testes Automatizados
+
+O projeto inclui uma suíte de testes automatizados utilizando o framework [pytest](https://pytest.org/). Os testes garantem que a função principal de avaliação das expressões matemáticas (`evaluate_expression`) está funcionando corretamente, cobrindo casos válidos e inválidos, incluindo operações matemáticas, divisões por zero, entradas vazias e sintaxes incorretas.
+
+### Como executar os testes
+
+1. Certifique-se de ter o `pytest` instalado:
+    ```bash
+    pip install pytest
+    ```
+
+2. Execute os testes na raiz do projeto:
+    ```bash
+    pytest
+    ```
+
+Se todos os testes passarem, você verá uma mensagem indicando sucesso. Caso algum teste falhe, o terminal mostrará detalhes para facilitar a correção.
+
+---
+
 ## 🏁 Instruções de Uso
 
 ### Pré‑requisitos
@@ -35,7 +56,7 @@ O projeto foi elaborado como parte da resolução de um exercício proposto na d
 
 1. **Clone** o repositório:  
    ```bash
-   git clone https://github.com/seu-usuario/calculadora-python.git
+   git clone https://github.com/MateusFernandesPereira/calculadora-python.git
    cd calculadora-python
    ```
 
