@@ -1,5 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
+from calculator_core import evaluate_expression
+
 
 class Calculator(ttk.Frame):
     def __init__(self, parent):
@@ -65,13 +67,17 @@ class Calculator(ttk.Frame):
             self.current_expression += str(char)
         self.update_display()
 
-    def evaluate(self):
-        try:
-            result = eval(self.current_expression)
-            self.current_expression = str(result)
-        except Exception:
-            messagebox.showerror("Erro", "Expressão inválida!")
-            self.current_expression = ''
+    from calculator_core import evaluate_expression
+
+	# Dentro do método evaluate:
+	def evaluate(self):
+		result = evaluate_expression(self.current_expression)
+		if result == "Erro":
+			messagebox.showerror("Erro", "Expressão inválida!")
+			self.current_expression = ''
+		else:
+			self.current_expression = result
+
 
     def update_display(self):
         self.display_label.config(text=self.current_expression or '0')
