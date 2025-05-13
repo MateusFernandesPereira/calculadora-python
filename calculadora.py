@@ -1,44 +1,50 @@
-def calcular(valor1, valor2, operacao):
-    """
-    Realiza a operação matemática 'operacao' entre valor1 e valor2.
-    Operações suportadas: '+', '-', '*', '/', '^'.
-    Retorna o resultado ou None se entrada/operacao inválida.
-    """
-    # Tenta converter para float
+import tkinter as tk
+from tkinter import messagebox
+
+def calcular():
     try:
-        a = float(valor1)
-        b = float(valor2)
-    except (ValueError, TypeError):
-        return None
+        a = float(entry1.get())
+        b = float(entry2.get())
+        op = operation.get()
+        resultado = None
 
-    # Dicionário de operações
-    operacoes = {
-        '+': lambda x, y: x + y,
-        '-': lambda x, y: x - y,
-        '*': lambda x, y: x * y,
-        '/': lambda x, y: x / y if y != 0 else None,  # evita divisão por zero
-        '^': lambda x, y: x ** y,
-    }
+        if op == '+':
+            resultado = a + b
+        elif op == '-':
+            resultado = a - b
+        elif op == '*':
+            resultado = a * b
+        elif op == '/':
+            resultado = a / b if b != 0 else None
+        elif op == '^':
+            resultado = a ** b
 
-    # Escolhe e executa a operação
-    func = operacoes.get(operacao)
-    if not func:
-        return None  # operação desconhecida
-
-    try:
-        return func(a, b)
+        if resultado is None:
+            raise ValueError
+        result_label.config(text=f"Resultado: {resultado}")
     except Exception:
-        return None
+        messagebox.showerror("Erro", "Entrada ou operação inválida!")
 
+# Janela principal
+root = tk.Tk()
+root.title("Calculadora GUI")
 
-if __name__ == "__main__":
-    # Exemplo de uso no terminal
-    v1 = input("Digite o primeiro valor: ")
-    v2 = input("Digite o segundo valor: ")
-    op = input("Digite a operação (+, -, *, /, ^): ")
+# Inputs
+entry1 = tk.Entry(root, width=10)
+entry1.grid(row=0, column=0, padx=5, pady=5)
+operation = tk.StringVar(root)
+operation.set('+')  # valor padrão
+ops_menu = tk.OptionMenu(root, operation, '+', '-', '*', '/', '^')
+ops_menu.grid(row=0, column=1, padx=5, pady=5)
+entry2 = tk.Entry(root, width=10)
+entry2.grid(row=0, column=2, padx=5, pady=5)
 
-    resultado = calcular(v1, v2, op)
-    if resultado is None:
-        print("Entrada ou operação inválida!")
-    else:
-        print(f"Resultado: {resultado}")
+# Botão de calcular
+calc_btn = tk.Button(root, text="Calcular", command=calcular)
+calc_btn.grid(row=1, column=0, columnspan=3, pady=10)
+
+# Label de resultado
+result_label = tk.Label(root, text="Resultado: ")
+result_label.grid(row=2, column=0, columnspan=3, pady=5)
+
+root.mainloop()
