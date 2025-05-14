@@ -1,7 +1,7 @@
 # 🧮 Calculadora GUI em Python
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+![Status](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 ![Testes](https://github.com/MateusFernandesPereira/calculadora-python/actions/workflows/python-app.yml/badge.svg)
 
 Este repositório apresenta uma aplicação de calculadora com interface gráfica, desenvolvida em Python, utilizando a biblioteca Tkinter/ttk.
