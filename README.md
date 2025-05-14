@@ -65,17 +65,21 @@ Se todos os testes passarem, você verá uma mensagem indicando sucesso. Caso al
     python calculadora_gui.py
     ```
 
+// ... existing code ...
 ## 📂 Estrutura do Projeto
 
 ```plaintext
 calculadora-python/
-├── calculadora.py      # Implementação da classe Calculator e execução da GUI
-├── assets/
-│   ├── screenshot1.png     # Captura de tela da interface inicial
-│   ├── screenshot2.png     # Captura de tela demonstrando uso da calculadora
-│   └── screenshot3.png     # Captura de tela mostrando mensagem de erro
-└── README.md               # Documento de instruções e descrição do projeto
-```
+├── .git/                   # Dados do repositório Git
+├── .github/                # Workflows e configurações do GitHub Actions
+├── assets/                 # Imagens de screenshots da interface
+│   ├── screenshot1.png
+│   ├── screenshot2.png
+│   └── screenshot3.png
+├── README.md               # Documento de instruções e descrição do projeto
+├── calculadora.py          # Implementação da classe Calculator e execução da GUI
+├── calculator_core.py      # Função de avaliação das expressões matemáticas
+└── test_calculator.py      # Testes automatizados com pytest
 ## 📸 Capturas de Tela
 
 ### 🖥️ Interface Inicial
