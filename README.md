@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Testes](https://github.com/MateusFernandesPereira/calculadora-python/actions/workflows/seu-workflow.yml/badge.svg)
+![Testes](https://github.com/MateusFernandesPereira/calculadora-python/actions/workflows/python-app.yml/badge.svg)
 
 Este repositório apresenta uma aplicação de calculadora com interface gráfica, desenvolvida em Python, utilizando a biblioteca Tkinter/ttk.
 O projeto foi elaborado como parte da resolução de um exercício proposto na disciplina Fundamentos de Sistemas de Informação, ministrada pelo docente Higor Amario de Souza, no curso de Bacharelado em Sistemas de Informação da UNESP – Universidade Estadual Paulista “Júlio de Mesquita Filho”.
