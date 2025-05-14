@@ -80,6 +80,8 @@ calculadora-python/
 ├── calculadora.py          # Implementação da classe Calculator e execução da GUI
 ├── calculator_core.py      # Função de avaliação das expressões matemáticas
 └── test_calculator.py      # Testes automatizados com pytest
+
+```
 ## 📸 Capturas de Tela
 
 ### 🖥️ Interface Inicial
