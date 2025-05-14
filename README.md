@@ -65,7 +65,6 @@ Se todos os testes passarem, você verá uma mensagem indicando sucesso. Caso al
     python calculadora_gui.py
     ```
 
-// ... existing code ...
 ## 📂 Estrutura do Projeto
 
 ```plaintext
